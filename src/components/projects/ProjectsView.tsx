@@ -27,7 +27,7 @@ export function ProjectsView({ projects, onToggleFeature, onUpdateUrls }: Projec
     <Card className="border-border bg-card p-6 space-y-6">
       <div className="border-b border-border pb-4">
         <h2 className="text-lg font-bold text-foreground flex items-center gap-2">
-          <Rocket className="h-4.5 w-4.5 text-rose-600" /> Portfolio Projects
+          <Rocket className="h-4.5 w-4.5 text-primary" /> Portfolio Projects
         </h2>
         <p className="text-xs text-muted-foreground mt-0.5">
           Track build progress across your portfolio, SaaS, and enterprise projects. Check off features to update each project&apos;s status automatically.
@@ -49,7 +49,7 @@ export function ProjectsView({ projects, onToggleFeature, onUpdateUrls }: Projec
                   <div className="min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <h3 className="text-sm font-bold text-foreground truncate">{project.name}</h3>
-                      <span className="text-[9px] font-bold uppercase tracking-wider text-rose-700 bg-rose-50 border border-rose-100 px-2 py-0.5 rounded-full shrink-0">
+                      <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full shrink-0">
                         {project.type}
                       </span>
                     </div>
@@ -180,7 +180,7 @@ function ProjectUrlsManager({ projectId, initialGithub, initialLive, initialDemo
         </Button>
         <Button
           onClick={async () => { await onSave(projectId, git, live, demo); setIsEditing(false); }}
-          className="bg-rose-600 hover:bg-rose-500 text-white h-7 text-xs font-semibold px-3"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground h-7 text-xs font-semibold px-3"
         >
           <Check className="mr-1 h-3 w-3" /> Save Links
         </Button>

@@ -42,7 +42,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-background p-6">
       <Card className="max-w-sm w-full border-border bg-card shadow-xl">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-rose-600 text-white shadow-md shadow-rose-950/15">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md shadow-emerald-900/20">
             <Sparkles className="h-6 w-6" />
           </div>
           <CardTitle className="text-foreground text-2xl font-bold">Life OS</CardTitle>
@@ -73,7 +73,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-rose-600 hover:bg-rose-500 text-white font-semibold"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               {isSubmitting ? (
                 <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Signing in...</>

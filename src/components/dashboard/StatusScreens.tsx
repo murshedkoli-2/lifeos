@@ -46,9 +46,9 @@ export function DbErrorScreen({ error, onRetry }: { error: string | null; onRetr
 export function SeedScreen({ onSeed, isSeeding }: { onSeed: () => void; isSeeding: boolean }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background p-6">
-      <Card className="max-w-md w-full border-border bg-card shadow-xl shadow-rose-100">
+      <Card className="max-w-md w-full border-border bg-card shadow-xl shadow-emerald-100/70">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-rose-50 border border-rose-200 text-rose-600">
+          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600">
             <Sparkles className="h-6 w-6" />
           </div>
           <CardTitle className="text-foreground text-2xl font-bold">Welcome to Life OS</CardTitle>
@@ -63,7 +63,7 @@ export function SeedScreen({ onSeed, isSeeding }: { onSeed: () => void; isSeedin
         </CardContent>
         <CardFooter>
           <Button
-            className="w-full bg-rose-600 hover:bg-rose-500 text-white font-semibold"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             onClick={onSeed}
             disabled={isSeeding}
           >

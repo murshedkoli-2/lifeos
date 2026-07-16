@@ -53,7 +53,7 @@ export function FinanceView({ transactions, totalSavings, onAddTransaction, onDe
             </div>
 
             <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
-              <DialogTrigger render={<Button className="bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs h-8" />}>
+              <DialogTrigger render={<Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xs h-8" />}>
                 <Plus className="mr-1.5 h-3.5 w-3.5" /> Log Deposit/Savings
               </DialogTrigger>
               <DialogContent className="border-border bg-card text-foreground sm:max-w-xs">
@@ -114,7 +114,7 @@ export function FinanceView({ transactions, totalSavings, onAddTransaction, onDe
                     </div>
                   </div>
                   <DialogFooter>
-                    <Button type="submit" className="bg-rose-600 hover:bg-rose-500 text-white h-8 text-xs font-semibold w-full">
+                    <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground h-8 text-xs font-semibold w-full">
                       Save Transaction
                     </Button>
                   </DialogFooter>
@@ -123,7 +123,7 @@ export function FinanceView({ transactions, totalSavings, onAddTransaction, onDe
             </Dialog>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 space-y-3">
+          <div className="p-4 rounded-xl bg-muted/60 border border-border space-y-3">
             <div className="flex justify-between items-center text-xs">
               <span className="text-muted-foreground">Progress towards target</span>
               <span className="font-bold text-foreground">৳{totalSavings.toLocaleString()} / ৳1,500,000</span>
@@ -141,7 +141,7 @@ export function FinanceView({ transactions, totalSavings, onAddTransaction, onDe
           </div>
           <div className="space-y-3 max-h-[400px] overflow-y-auto pr-1">
             {transactions.map((tx) => (
-              <div key={tx._id} className="p-3 bg-slate-50 border border-slate-100 rounded-lg flex items-center justify-between gap-3 group">
+              <div key={tx._id} className="p-3 bg-muted/50 border border-border rounded-lg flex items-center justify-between gap-3 group">
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2">
                     <span className={`text-[10px] font-bold uppercase px-1.5 py-0.5 rounded ${

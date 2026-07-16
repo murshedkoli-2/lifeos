@@ -79,7 +79,7 @@ export function GoalsView({ tasks, activeTask, onAddTask, onUpdateTask, onDelete
         </div>
 
         <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
-          <DialogTrigger render={<Button className="bg-rose-600 hover:bg-rose-500 text-white font-semibold text-xs h-8" />}>
+          <DialogTrigger render={<Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-xs h-8" />}>
             <Plus className="mr-1.5 h-3.5 w-3.5" /> Add New Goal
           </DialogTrigger>
           <DialogContent className="border-border bg-card text-foreground sm:max-w-md">
@@ -135,7 +135,7 @@ export function GoalsView({ tasks, activeTask, onAddTask, onUpdateTask, onDelete
                 </div>
               </div>
               <DialogFooter>
-                <Button type="submit" className="bg-rose-600 hover:bg-rose-500 text-white h-8 text-xs font-semibold w-full">
+                <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground h-8 text-xs font-semibold w-full">
                   Add Goal to Roadmap
                 </Button>
               </DialogFooter>
@@ -152,7 +152,7 @@ export function GoalsView({ tasks, activeTask, onAddTask, onUpdateTask, onDelete
             <div key={phaseName} className="space-y-3">
               <div className="flex items-center justify-between border-b border-border pb-2">
                 <span className="text-xs font-bold text-foreground/80 flex items-center gap-1.5 font-sans">
-                  <span className={`h-2 w-2 rounded-full ${isPhaseCompleted ? 'bg-emerald-500' : 'bg-rose-500'}`}></span>
+                  <span className={`h-2 w-2 rounded-full ${isPhaseCompleted ? 'bg-emerald-500' : 'bg-amber-400'}`}></span>
                   {phaseName}
                 </span>
                 <span className="text-[10px] text-muted-foreground/80 font-semibold uppercase font-sans">
@@ -163,11 +163,11 @@ export function GoalsView({ tasks, activeTask, onAddTask, onUpdateTask, onDelete
               <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-2.5">
                 {phaseTasks.map((task) => {
                   const isActive = activeTask?._id === task._id;
-                  let bgStyle = 'bg-slate-100/50 border-slate-200/80 text-slate-400 hover:bg-slate-200/80 cursor-pointer';
+                  let bgStyle = 'bg-muted/60 border-border text-muted-foreground/70 hover:bg-muted cursor-pointer';
                   if (task.isCompleted) {
                     bgStyle = 'bg-emerald-50 border-emerald-200 text-emerald-700 hover:bg-emerald-100/70 cursor-pointer shadow-sm';
                   } else if (isActive) {
-                    bgStyle = 'bg-rose-50 border-rose-300 text-rose-600 hover:bg-rose-100/50 cursor-pointer animate-pulse ring-1 ring-rose-500/20';
+                    bgStyle = 'bg-primary/10 border-primary/60 text-primary hover:bg-primary/15 cursor-pointer animate-pulse ring-2 ring-primary/30 font-extrabold';
                   }
                   return (
                     <button key={task._id} onClick={() => openEdit(task)}
@@ -257,7 +257,7 @@ export function GoalsView({ tasks, activeTask, onAddTask, onUpdateTask, onDelete
                   <Trash2 className="mr-1 h-3.5 w-3.5" /> Delete Goal
                 </Button>
               )}
-              <Button type="submit" className="bg-rose-600 hover:bg-rose-500 text-white h-8 text-xs font-semibold flex-1">
+              <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground h-8 text-xs font-semibold flex-1">
                 Save Changes
               </Button>
             </DialogFooter>

@@ -48,74 +48,76 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/* Soft green premium palette — emerald-forward brand on a warm, green-tinted neutral base. */
 :root {
-  --background: #f9fafb;
-  --foreground: #09090b;
+  --background: #f4f8f5;
+  --foreground: #0b1a13;
   --card: #ffffff;
-  --card-foreground: #09090b;
+  --card-foreground: #0b1a13;
   --popover: #ffffff;
-  --popover-foreground: #09090b;
-  --primary: #e11d48;
+  --popover-foreground: #0b1a13;
+  --primary: #059669;
   --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #09090b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #ffe4e6;
-  --accent-foreground: #be123c;
+  --secondary: #eaf2ed;
+  --secondary-foreground: #0b1a13;
+  --muted: #eef3f0;
+  --muted-foreground: #5a716a;
+  --accent: #d6f2e4;
+  --accent-foreground: #047857;
   --destructive: #ef4444;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #fca5a5;
-  --chart-1: #e11d48;
-  --chart-2: #f59e0b;
-  --chart-3: #10b981;
-  --chart-4: #3b82f6;
+  --border: #dfeae4;
+  --input: #dfeae4;
+  --ring: #6ee7b7;
+  --chart-1: #059669;
+  --chart-2: #0d9488;
+  --chart-3: #65a30d;
+  --chart-4: #f59e0b;
   --chart-5: #8b5cf6;
-  --radius: 0.75rem;
+  --radius: 0.85rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #09090b;
-  --sidebar-primary: #e11d48;
+  --sidebar-foreground: #0b1a13;
+  --sidebar-primary: #059669;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: #e11d48;
-  --sidebar-border: #e4e4e7;
-  --sidebar-ring: #fca5a5;
+  --sidebar-accent: #eef3f0;
+  --sidebar-accent-foreground: #047857;
+  --sidebar-border: #dfeae4;
+  --sidebar-ring: #6ee7b7;
 }
 
 
+/* Premium green dark — deep forest surfaces with a luminous emerald accent. */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.19 0.018 165);
+  --foreground: oklch(0.96 0.01 150);
+  --card: oklch(0.23 0.022 166);
+  --card-foreground: oklch(0.96 0.01 150);
+  --popover: oklch(0.23 0.022 166);
+  --popover-foreground: oklch(0.96 0.01 150);
+  --primary: oklch(0.72 0.14 162);
+  --primary-foreground: oklch(0.2 0.03 165);
+  --secondary: oklch(0.28 0.02 165);
+  --secondary-foreground: oklch(0.96 0.01 150);
+  --muted: oklch(0.28 0.02 165);
+  --muted-foreground: oklch(0.72 0.02 160);
+  --accent: oklch(0.32 0.045 164);
+  --accent-foreground: oklch(0.9 0.06 160);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --ring: oklch(0.6 0.11 162);
+  --chart-1: oklch(0.72 0.14 162);
+  --chart-2: oklch(0.7 0.12 190);
+  --chart-3: oklch(0.75 0.16 130);
+  --chart-4: oklch(0.77 0.15 70);
+  --chart-5: oklch(0.7 0.14 300);
+  --sidebar: oklch(0.22 0.022 166);
+  --sidebar-foreground: oklch(0.96 0.01 150);
+  --sidebar-primary: oklch(0.72 0.14 162);
+  --sidebar-primary-foreground: oklch(0.2 0.03 165);
+  --sidebar-accent: oklch(0.28 0.02 165);
+  --sidebar-accent-foreground: oklch(0.9 0.06 160);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: oklch(0.6 0.11 162);
 }
 
 @layer base {
@@ -127,5 +129,16 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar while keeping scroll (used by the mobile nav strip). */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }

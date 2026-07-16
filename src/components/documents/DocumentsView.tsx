@@ -64,7 +64,7 @@ function DocumentCheckItem({ label, taskId, tasks, uploadedDocs, uploadingDocTit
                 </div>
                 <div className="flex justify-between items-center mt-3 text-[10px] text-muted-foreground">
                   <span>Cloudinary Secure Photo Storage</span>
-                  <a href={savedDoc.fileUrl} target="_blank" rel="noreferrer" className="text-rose-600 font-semibold hover:underline flex items-center gap-1">
+                  <a href={savedDoc.fileUrl} target="_blank" rel="noreferrer" className="text-primary font-semibold hover:underline flex items-center gap-1">
                     Open Original <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
@@ -77,7 +77,7 @@ function DocumentCheckItem({ label, taskId, tasks, uploadedDocs, uploadingDocTit
 
         <div>
           {isUploading ? (
-            <div className="flex items-center gap-1 text-[10px] font-bold text-rose-600 animate-pulse bg-rose-50 border border-rose-100 rounded px-2.5 py-1">
+            <div className="flex items-center gap-1 text-[10px] font-bold text-emerald-700 animate-pulse bg-emerald-50 border border-emerald-100 rounded px-2.5 py-1">
               <Loader2 className="h-3 w-3 animate-spin" /> Uploading...
             </div>
           ) : (
@@ -103,7 +103,7 @@ interface DocSection {
 
 const SECTIONS: DocSection[] = [
   {
-    heading: 'Academic Certificates', accent: 'rose', icon: FileText,
+    heading: 'Academic Certificates', accent: 'emerald', icon: FileText,
     items: [
       { label: 'Passport (Minimum 2 years validity)', taskId: '29' },
       { label: 'SSC Certificate & Marksheet', taskId: '30' },
@@ -112,7 +112,7 @@ const SECTIONS: DocSection[] = [
     ],
   },
   {
-    heading: 'Professional Profile', accent: 'emerald', icon: TrendingUp,
+    heading: 'Professional Profile', accent: 'sky', icon: TrendingUp,
     items: [
       { label: 'Recommendation Letters (2 Profs/Managers)', taskId: '32' },
       { label: 'ATS-Friendly Developer Resume', taskId: '33' },
@@ -134,8 +134,8 @@ const SECTIONS: DocSection[] = [
 ];
 
 const ACCENT_CLASSES: Record<string, string> = {
-  rose: 'text-rose-600 border-rose-100',
   emerald: 'text-emerald-600 border-emerald-100',
+  sky: 'text-sky-600 border-sky-100',
   amber: 'text-amber-700 border-amber-100',
 };
 
@@ -162,7 +162,7 @@ export function DocumentsView({ tasks, uploadedDocs, uploadingDocTitle, onUpload
         {SECTIONS.map((section) => {
           const Icon = section.icon;
           return (
-            <div key={section.heading} className="p-4 rounded-lg bg-slate-50 border border-slate-100 space-y-3">
+            <div key={section.heading} className="p-4 rounded-lg bg-muted/50 border border-border space-y-3">
               <h3 className={`text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 border-b pb-2 ${ACCENT_CLASSES[section.accent]}`}>
                 <Icon className="h-4 w-4" /> {section.heading}
               </h3>

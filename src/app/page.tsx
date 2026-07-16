@@ -56,10 +56,10 @@ function Dashboard() {
       <div className="flex-1 flex flex-col min-w-0 min-h-screen">
         <DashboardHeader overallProgressPercent={overallProgressPercent} totalSavings={totalSavings} />
 
-        <main className="flex-1 p-6 lg:p-8 overflow-y-auto">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
           {loading ? (
             <div className="h-64 flex flex-col items-center justify-center gap-3">
-              <Loader2 className="h-8 w-8 text-rose-600 animate-spin" />
+              <Loader2 className="h-8 w-8 text-primary animate-spin" />
               <p className="text-xs text-muted-foreground font-medium">Loading Life OS Environment...</p>
             </div>
           ) : (

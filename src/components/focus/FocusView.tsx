@@ -50,7 +50,7 @@ export function FocusView({
         <Card className="border-border bg-card p-4 space-y-3 shadow-md">
           <div className="flex justify-between items-center border-b border-border pb-2">
             <span className="text-xs font-bold text-foreground/80 flex items-center gap-1.5 font-sans">
-              <span className="h-2 w-2 rounded-full bg-rose-500"></span>
+              <span className="h-2 w-2 rounded-full bg-primary"></span>
               Week {activeTask.weekNumber} Tasks Checklist
             </span>
             <span className="text-[10px] text-muted-foreground/85 font-semibold uppercase font-sans">
@@ -67,8 +67,8 @@ export function FocusView({
                   onClick={() => onFocusTask(t._id)}
                   className={`flex items-center justify-between p-3 rounded-lg border transition cursor-pointer text-xs ${
                     isFocused
-                      ? 'bg-rose-50 border-rose-300 text-rose-900 shadow-sm'
-                      : 'bg-slate-50 border-slate-100 hover:bg-slate-100/55 text-slate-800'
+                      ? 'bg-emerald-50 border-emerald-300 text-emerald-900 shadow-sm'
+                      : 'bg-muted/60 border-border hover:bg-muted text-foreground/80'
                   }`}
                 >
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
@@ -78,11 +78,11 @@ export function FocusView({
                       onCheckedChange={() => onToggleTask(t)}
                       onClick={(e) => e.stopPropagation()}
                     />
-                    <span className={`truncate font-medium ${t.isCompleted ? 'line-through text-slate-400 font-normal' : ''}`}>
+                    <span className={`truncate font-medium ${t.isCompleted ? 'line-through text-muted-foreground/70 font-normal' : ''}`}>
                       {t.title}
                     </span>
                   </div>
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-rose-700 bg-rose-50 border border-rose-100 px-2 py-0.5 rounded-full shrink-0 ml-2">
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-100 px-2 py-0.5 rounded-full shrink-0 ml-2">
                     {t.category}
                   </span>
                 </div>
@@ -94,10 +94,10 @@ export function FocusView({
         {/* Focused task card */}
         {focusedTask && (
           <Card className="border-border bg-card shadow-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full blur-2xl"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
             <CardHeader className="relative">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-bold text-rose-700 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200">
+                <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200">
                   {focusedTask.phase}
                 </span>
                 <span className="text-xs text-muted-foreground/80 font-medium flex items-center gap-1">
@@ -105,12 +105,12 @@ export function FocusView({
                 </span>
               </div>
               <CardTitle className="text-xl font-bold text-foreground flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-rose-500 animate-pulse"></span>
+                <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
                 {focusedTask.title}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 relative">
-              <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
+              <div className="p-4 rounded-lg bg-muted/60 border border-border">
                 <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Goal Instructions</h3>
                 <p className="text-sm text-foreground/90 leading-relaxed whitespace-pre-wrap">{focusedTask.description}</p>
               </div>
@@ -135,28 +135,28 @@ export function FocusView({
                   value={activeTaskNotes}
                   onChange={(e) => onNotesChange(e.target.value)}
                   rows={6}
-                  className="w-full text-sm bg-white border border-border rounded-lg p-3 text-foreground focus:outline-none focus:ring-1 focus:ring-rose-500 placeholder-slate-400 transition"
+                  className="w-full text-sm bg-background border border-border rounded-lg p-3 text-foreground focus:outline-none focus:ring-1 focus:ring-primary placeholder-muted-foreground/60 transition"
                 />
                 <div className="flex justify-end gap-2">
                   <Button
                     onClick={onSaveNotes}
                     disabled={isSavingNotes}
-                    className="bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs py-1 h-8"
+                    className="bg-muted hover:bg-muted/70 text-foreground/80 border border-border text-xs py-1 h-8"
                   >
                     {isSavingNotes ? <Loader2 className="h-3 w-3 animate-spin" /> : 'Save Notes'}
                   </Button>
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="bg-slate-50/40 border-t border-border/60 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <CardFooter className="bg-muted/40 border-t border-border/60 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2 text-muted-foreground/80 text-xs">
-                <Info className="h-4 w-4 text-rose-600" />
+                <Info className="h-4 w-4 text-primary" />
                 <span>Completing all tasks in this week unlocks the next week in chronological order.</span>
               </div>
               <Button
                 onClick={onCompleteActiveTask}
                 disabled={isSavingNotes}
-                className="bg-rose-600 hover:bg-rose-500 text-white font-bold px-6 py-5 shadow-lg shadow-rose-100 w-full sm:w-auto"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 py-5 shadow-lg shadow-emerald-200/60 w-full sm:w-auto"
               >
                 {isSavingNotes ? (
                   <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving...</>
